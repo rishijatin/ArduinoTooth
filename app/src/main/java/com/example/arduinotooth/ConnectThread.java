@@ -54,9 +54,7 @@ public class ConnectThread extends Thread {
             return;
         }
 
-        // The connection attempt succeeded. Perform work associated with
-        // the connection in a separate thread.
-        myCallback.sucess(mmDevice.getName(),mmDevice.getAddress());
+        myCallback.success(mmDevice.getName(),mmDevice.getAddress());
 
     }
 
@@ -85,6 +83,6 @@ public class ConnectThread extends Thread {
 
     public interface callback
     {
-        void sucess(String name,String address);
+        void success(String name,String address);
     }
 }

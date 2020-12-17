@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     connectThread= new ConnectThread(devicesAddress.get(position));
                     connectThread.setMyCallback(new ConnectThread.callback() {
                         @Override
-                        public void sucess(String name, String address) {
+                        public void success(String name, String address) {
                             spinner.setVisibility(View.GONE);
                             button2.setVisibility(View.GONE);
                             textView.setVisibility(View.VISIBLE);
