@@ -137,12 +137,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
         blueToothBrodcast.setbrodcastListener(new BlueToothBrodcast.brodcastListener() {
             @Override
             public void getBTState(String state) {
@@ -189,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 if(deviceName!=null) {
                     devices.add(deviceName);
                     devicesAddress.add(device);
-                    Log.i("Jatin", deviceName);
+
                 }
             }
         });

@@ -31,7 +31,7 @@ public class ConnectThread extends Thread {
             // MY_UUID is the app's UUID string, also used in the server code.
             tmp = mmDevice.createInsecureRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
         } catch (IOException e) {
-            Log.e("Jatin", "Socket's create() method failed", e);
+
         }
         mmSocket = tmp;
 
@@ -43,13 +43,12 @@ public class ConnectThread extends Thread {
             // Connect to the remote device through the socket. This call blocks
             // until it succeeds or throws an exception.
             mmSocket.connect();
-            Log.i("Jatin","Started");
         } catch (IOException connectException) {
             // Unable to connect; close the socket and return.
             try {
                 mmSocket.close();
             } catch (IOException closeException) {
-                Log.e("Jatin", "Could not close the client socket", closeException);
+
             }
             return;
         }
@@ -66,7 +65,6 @@ public class ConnectThread extends Thread {
         }
         catch (Exception e)
         {
-            Log.i("Jatin","Some thing occured");
             e.printStackTrace();
         }
     }
@@ -77,7 +75,7 @@ public class ConnectThread extends Thread {
         try {
             mmSocket.close();
         } catch (IOException e) {
-            Log.e("Jatin", "Could not close the client socket", e);
+
         }
     }
 
